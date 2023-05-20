@@ -1,0 +1,69 @@
+body{
+    background-image: linear-gradient(to right, #dbdada73, #c5e4eb47);
+    padding-top: 70px;
+}
+
+#root{
+    padding: 1%;
+    margin: auto;
+    width: 50%;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #dbdada73, #c5e4eb47);
+}
+
+.text-box{
+    padding-left: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: initial;
+}
+
+.add-button{
+    margin-left: 1%;
+    width: 47px;
+    height: 46px;
+    font-size: larger;
+    font-weight:bold
+}
+
+.todo-list{
+    padding-left: 10px;
+    padding-top: 0px;
+    margin-top: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: #c3e3e161;
+}
+
+.list-data {
+    display: flex;
+}
+
+.checkbox {
+    width: 25px;
+}
+
+.list-name {
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-bottom: 12px;
+    margin-bottom: -1px;
+}
+
+.icons {
+    float: right;
+    margin-top: -40px;
+}
+
+.icon1 {
+    padding-right: 10px;
+}
+
+.date {
+    display: contents;
+    font-size: 13px;
+    /* margin-left: 5px; */
+
+}
+
