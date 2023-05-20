@@ -4,18 +4,20 @@ import ToDoList from "./List";
 
 const TextBox = () => {
 
-    let [toDo, setToDo] = useState("");
+    const [toDo, setToDo] = useState("");
 
-    let [toDos, setToDos] = useState(() => {
+    // Use State initialising using LocalStorage
+    const [toDos, setToDos] = useState(() => {
         const initialvalue=JSON.parse(localStorage.getItem("toDos"))
         return (initialvalue || [])
     });
 
+    // Use Effect config for updating datas into LocalStorage 
     useEffect(() => {
         localStorage.setItem("toDos", JSON.stringify(toDos));
     },[toDos])
 
-
+    // Date time congiure
     const now = new Date();
 
     const year = now.getFullYear();
@@ -25,8 +27,9 @@ const TextBox = () => {
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
 
-    let date = `${year}-${month}-${day}  ${hours}:${minutes}:${seconds}`;
+    const date = `${year}-${month}-${day}  ${hours}:${minutes}:${seconds}`;
 
+    // Updating values for ToDo state 
     const addTodo = () => {
         if(toDo.length > 0) {
             setToDos([...toDos, {key: Date.now(), value: toDo, status: false, date: date}])
@@ -43,6 +46,7 @@ const TextBox = () => {
 
     return (
         <div>
+            {/* Text box and add button  */}
             <div style={{ display: "flex", marginBottom: "25px" }}>
                 <input value={toDo} onChange={(e) => { setToDo(e.target.value) }} type="text" className="text-box" placeholder="Add something ..." />
                 <button className="add-button" onClick={addTodo}>+</button>
