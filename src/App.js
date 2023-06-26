@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import TextBox from "./Components/Textbox";
+import '../index.css'
+
 
 const Header = () => {
 

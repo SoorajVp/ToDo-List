@@ -1,7 +1,10 @@
+import '../../index.css'
+
 const ToDoList = ({ toDos, setToDos }) => {
 
-  return toDos.map((item) => {
+  return [...toDos].reverse().map((item) => {
 
+    // Check function
     const checkTodo = (e) => {
       setToDos(
         toDos.filter((list) => {

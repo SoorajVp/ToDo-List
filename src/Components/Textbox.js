@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ToDoList from "./List";
+import '../../index.css'
 
 
 const TextBox = () => {
@@ -37,6 +38,7 @@ const TextBox = () => {
         }
     }
 
+    // Component for Empty List
     const EmptyTodo = () => {
         return <h4 style={{textAlign: "center", color: "#ad1717"}}> List is Empty !</h4>
     }
